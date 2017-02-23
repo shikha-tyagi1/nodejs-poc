@@ -1,0 +1,43 @@
+
+/**
+ * Default configuration. Base for all environment configs (developement, staging, production).
+ *
+ * Check https://github.com/lorenwest/node-config for docs about how configuration works
+ *
+ * @type {Object}
+ */
+{
+  // Customer module configs
+  "Users": {
+    "dbConfig": {
+      "host": "localhost",
+      "port": 3000,
+      "dbName": "users"
+    }
+  },
+ "googleStrategy": {  
+        "clientID":"975854528997-v3depi9p5d6ut2327aqtmn2ehpbp9skm.apps.googleusercontent.com",
+        "clientSecret": "NLuow4TkQGB_xfR7dx1dhGG6",
+        "callbackURL": "http://localhost:3000/login/google/callback",
+        "authenticateOptions": {
+            "scope": [
+                "https://www.googleapis.com/auth/userinfo.profile",
+                "https://www.googleapis.com/auth/userinfo.email"
+            ]
+        }
+    },
+   "facebookStrategy" : {
+        "clientID": "224320851346735",
+        "clientSecret": "b596e32024cef20b89ce766290a86c05",
+        "callbackURL": "http://localhost:3000/login/facebook/callback",
+        "authType": "rerequest",
+        "enableProof": true
+        "authenticateOptions": {
+            "scope": ["email"]
+        }
+    },
+    "secretKey": "secret cat123" 
+
+  }
+
+
